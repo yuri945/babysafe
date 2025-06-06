@@ -1,0 +1,222 @@
+/* General Body Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe0f0; /* Soft pink background */
+    color: #4a4a4a;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 25px 0;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #a7e9af, #84d489); /* Gradiant green */
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    min-height: 100px;
+    border-bottom: #6bbb70 5px solid;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* For cute patterns */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23FFFFFF" fill-opacity="0.3" fill-rule="evenodd"><path d="M0 0h20v20H0zM20 20h20v20H20z" fill-rule="nonzero"/><path d="M10 0h20L20 10H0zM0 10h10L10 0zM10 20h20L20 30H0zM0 30h10L10 20zM20 0h10L10 10H0zM20 10h10L10 20zM20 20h10L10 30zM20 30h10L10 40z" opacity=".5"/></g></svg>');
+    background-size: 40px 40px;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Make it round */
+    border: 5px solid #fff; /* Cute border */
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-family: 'Fredoka One', cursive;
+    margin: 0;
+    padding: 0;
+    font-size: 3.5em;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+header p {
+    font-size: 1.4em;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Section Styles */
+section {
+    padding: 30px 0;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px dashed #ffb3d9; /* Dashed border for a playful look */
+}
+
+section h2 {
+    font-family: 'Fredoka One', cursive;
+    color: #ff69b4; /* Hot pink */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.8em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+section p {
+    text-align: center; /* Center align for a friendlier feel */
+    margin: 0 auto 15px auto;
+    font-size: 1.1em;
+    max-width: 700px;
+}
+
+.team-intro {
+    font-style: italic;
+    color: #6a6a6a;
+    margin-bottom: 30px;
+}
+
+/* Team Section Specific Styles */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.member {
+    background: #fff3f9; /* Lighter pink for member cards */
+    padding: 20px;
+    border-radius: 15px;
+    flex: 0 1 calc(33% - 40px); /* Three columns, adjust as needed */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    border: 1px solid #ffcce5;
+    transition: transform 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+.member h3 {
+    font-family: 'Fredoka One', cursive;
+    color: #ff85c2; /* Medium pink */
+    margin-top: 0;
+    font-size: 1.6em;
+}
+
+.member p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.member span {
+    font-size: 0.9em;
+    color: #777;
+    font-style: italic;
+}
+
+.member ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.member ul li {
+    margin-bottom: 8px;
+    background: #f9e0f2; /* Even lighter pink for list items */
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #6a6a6a;
+}
+
+.member.full-width {
+    flex-basis: 100%; /* Makes the 'Construtores de Sonhos' take full width */
+    max-width: 600px; /* Limit width for better readability */
+}
+
+/* Footer Styles */
+footer {
+    background: #5cb85c; /* Footer green */
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    border-top: #4aa04a 5px solid;
+    font-size: 0.95em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2.8em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    section h2 {
+        font-size: 2.2em;
+    }
+
+    .member {
+        flex: 0 1 calc(50% - 30px); /* Two columns on smaller screens */
+    }
+
+    .member.full-width {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .member {
+        flex: 0 1 100%; /* Single column on very small screens */
+    }
+}
